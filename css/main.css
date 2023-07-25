@@ -2,6 +2,7 @@
 :root {
     --main-color:  #2196F3;
     --main-color-alt:  #1787e0;
+    --main-transtion: 0.4s;
     --transport-color : rgb( 15 116 143 / 70% );
     --section-padding: 100px;
 }
@@ -19,6 +20,9 @@ body {
 ul {
     list-style: none;
     padding: 0; margin: 0;
+}
+a {
+    text-decoration: none;
 }
 .container {
     padding-left: 15px;   padding-right: 15px;
@@ -80,3 +84,38 @@ ul {
     color: #777;
 }
 /* End Componentes ******************************************************* */
+/* start header */
+.header {
+    background-color: white;
+    box-shadow: 0 0 10px #ddd;
+    position: relative;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .logo {
+    color: var(--main-color);
+    font-size: 26px;  font-weight: bold;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .main-nav {
+    display: flex;
+}
+.header .main-nav > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    padding: 0 20px;
+    color: black;
+    position: relative;
+    transition: var(--main-transtion);
+}
+/* end header */
