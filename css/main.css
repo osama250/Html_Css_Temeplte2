@@ -49,7 +49,7 @@ a {
     text-align: center;
     position: relative;
     width: fit-content;
-    margin: 100px auto;
+    margin: 0 auto 80px;
     padding: 10px 20px;
     font-size: 30px;
     border: 2px solid black;
@@ -306,6 +306,60 @@ a {
     animation: bouncing 1.5s linear infinite forwards;
 }
 /* end Landing */
+/* Start articales */
+.articales {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.articales .container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(250px , 1fr) );
+    gap: 40px;
+}
+.articales .box {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba( 0 0 0 / 10%);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform var(--main-transtion) , box-shadow var(--main-transtion);
+}
+.articales .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgba( 0 0 0 / 20%);
+}
+.articales .box img {
+    max-width: 100%;
+} 
+.articales .box .content {
+    padding: 20px;
+}
+.articales .content h3 {
+    margin: 0;
+}
+.articales .content p {
+    margin: 10px 0 0;
+    color: #777;
+    line-height: 1.5;
+}
+.articales .box .info {
+    padding: 20px;
+    border-top: 1px solid #e9e6e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.articales .info a {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.articales .info i {
+    color: var(--main-color);
+}
+.articales .box:hover .info i {
+    animation: moving-arrow 0.5s linear infinite;
+}
+/* End articales */
 /* Start Animation  */
 @keyframes up-to-down  {
     0%, 100% {
@@ -343,5 +397,10 @@ a {
         right: 0; 
         border-radius: 0;
         width: 100%;  height: 100%;
+    }
+}
+@keyframes moving-arrow {
+    100% {
+        transform: translateX(10px);
     }
 }
