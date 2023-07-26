@@ -5,6 +5,7 @@
     --main-transtion: 0.4s;
     --transport-color : rgb( 15 116 143 / 70% );
     --section-padding: 100px;
+    --section-background: #ececec;
 }
 *{
     box-sizing: border-box;
@@ -359,7 +360,48 @@ a {
 .articales .box:hover .info i {
     animation: moving-arrow 0.5s linear infinite;
 }
-/* End articales */
+/* End articales $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/*  Start garllery */
+.garllery {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-color: var(--section-background);
+}
+.garllery .container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(300px , 1fr) );
+    gap: 40px;
+} 
+.garllery .box {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgba( 0 0 0 / 13% )  , 0 2px 4px 8px rgba( 0 0 0 / 12% ) ;
+}
+.garllery .box .image { 
+    position: relative;
+}
+.garllery .box .image::before { 
+    content: '';
+    position: absolute;
+    left: 50%;      top: 50%;
+    transform: translate( -50% , -50% );
+    width: 0;    height: 0;
+    opacity: 0;
+    background-color: #ececec;
+    z-index: 2;
+}
+.garllery .box .image:hover::before { 
+    animation: flashing 0.8s;
+}
+.garllery .box img {
+    max-width: 100%;
+    transition: var(--main-transtion);
+}
+.garllery .box .image:hover img { 
+    transform: rotate(5deg) scale(1.1);
+}
+/*  End garllery */
 /* Start Animation  */
 @keyframes up-to-down  {
     0%, 100% {
@@ -402,5 +444,15 @@ a {
 @keyframes moving-arrow {
     100% {
         transform: translateX(10px);
+    }
+}
+@keyframes flashing {
+    0% , 40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
     }
 }
