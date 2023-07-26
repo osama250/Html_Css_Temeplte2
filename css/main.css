@@ -434,7 +434,7 @@ a {
 .feature .box .image::after {
     content: '';
     position: absolute;
-    right: 0;     bottom: 0;
+    right: 0;   bottom: 0; top: -1;
     border-style: solid;
     border-width: 0 0 155px 500px;
     border-color: transparent transparent white transparent;
@@ -531,7 +531,52 @@ a {
     background-size: 200% 100%;
     background-position: right bottom;
 }
-/* End feature */
+/* End feature ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* Start Testimonialss  */
+.testimonialss {
+    padding-top:    var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-color: var(--section-background);
+}
+.testimonialss .container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(300px , 1fr) );
+    gap: 40px;
+}
+.testimonialss .box {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(  0 0 0 / 7% );
+    border-radius: 8px;
+    position: relative;
+}
+.testimonialss .box img { 
+    position: absolute;
+    right: -10px;       top: -50px;
+    width: 100px;       height: 100px;
+    border-radius: 50%;
+    border: 8px solid var(--main-color);
+}
+.testimonialss .box h3 { 
+    margin: 0 0 10px;
+    color: var(--main-color);
+}
+.testimonialss .box .title { 
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+}
+.testimonialss .box .full { 
+    color: #ffc107;
+}
+.testimonialss .box p { 
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #777;
+}
+/* End Testimonialss &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 /* Start Animation  */
 @keyframes up-to-down  {
     0%, 100% {
