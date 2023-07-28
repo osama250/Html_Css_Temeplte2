@@ -864,7 +864,133 @@ a {
     margin: 10px 0 0;
     font-size: 16px;
 }
-/* End work-steps */
+/* End work-steps &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* Strat Eevntes  ************************************************* */
+.events {
+    padding-top:    var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.events img {
+    max-width: 450px;
+}
+@media ( max-width:991px ) {
+    .events img {
+        display: none;
+    }
+}
+.events .info { 
+    flex: 1;
+}
+.events .info .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px;
+}
+.events .info .time .unit {
+    text-align: center;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    width: 75px;
+    transition: var(--main-transtion);
+}
+.events .info .time .unit span {
+    display: block;
+}
+.events .info .time .unit span:first-child {
+    font-size: 30px;    font-weight: bold;
+    color: var(--main-color);
+    padding: 15px;
+}
+.events .info .time .unit span:last-child {
+    padding: 8px 10px;
+    font-size: 12px;
+    border-top: 1px solid #d4d4d4;
+}
+.events .info .time .unit:hover ,
+.events .info .time .unit:hover span:last-child {
+    border-color: var(--main-color);
+}
+.events .info .title {
+    text-align: center;
+    margin: 40px 0 10px;
+    font-size: 30px;
+}
+.events .info .description {
+    text-align: center;
+    line-height: 1.7;
+    color: #777;
+    font-size: 16px;
+}
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
+}
+.events .subscribe form  {
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f6f6f6;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+@media ( max-width:767px ) {
+    .events .subscribe form  { 
+        max-width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        border-radius: 0;
+    }
+}
+.events .subscribe form input[type="email"] {
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    caret-color: var(--main-color);
+}
+.events .subscribe form input[type="email"]:focus {
+    outline: none;
+}
+@media ( max-width:767px ) { 
+    .events .subscribe form input[type="email"] {
+        border-radius: 0;
+    }
+}
+
+.events .subscribe form input[type="email"]::placeholder {
+    transition: opacity var(--main-transtion);
+}
+.events .subscribe form input[type="email"]:focus::placeholder { 
+    opacity: 0;
+}
+.events .subscribe form input[type="submit"] {
+    border: none;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--main-transtion);
+}
+.events .subscribe form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+@media ( max-width:767px ) {  
+    .events .subscribe form input[type="submit"] { 
+        border-radius: 0;
+    }
+}
+/* End   Eevntes */
 /* Start Animation  */
 @keyframes up-to-down  {
     0%, 100% {
