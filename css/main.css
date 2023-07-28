@@ -553,7 +553,7 @@ a {
 }
 .testimonialss .box img { 
     position: absolute;
-    right: -10px;       top: -50px;
+    right: -10px;       top: -20px;
     width: 100px;       height: 100px;
     border-radius: 50%;
     border: 8px solid var(--main-color);
@@ -577,6 +577,99 @@ a {
     color: #777;
 }
 /* End Testimonialss &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* Start Team */
+.team {
+    padding-top:    var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.team .container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(300px , 1fr) );
+    gap: 30px;
+}
+.team .box {
+    position: relative;
+}
+.team .box::before ,
+.team .box::after {
+    content: '';
+    position: absolute;
+    top: 0;     right: 0;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+    transition: var(--main-transtion);
+}
+.team .box::before { 
+    width: calc( 100% - 60px );
+    z-index: -2;
+}
+@media ( max-width:767px ) {
+    .team .box::before { 
+        width: 100%;
+    }
+}
+.team .box::after {
+    background-color: #e4e4e4;
+    z-index: -1;
+    width: 0;
+}
+.team .box:hover::after {
+    width: calc( 100% - 60px );
+}
+.team .box .data {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+.team .box .data img {
+    width: calc( 100% - 60px );
+    transition: var(--main-transtion);
+    border-radius: 8px;
+}
+.team .box:hover img {
+    filter: grayscale(100%);
+}
+.team .box .data .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    gap: 20px;
+}
+.team .box .data .social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 60px;
+}
+.team .box .data .social a:hover i {
+    color: var(--main-color);
+}
+.team .box .data .social i {
+    color: #777;
+    transition: var(--main-transtion);
+}
+.team .box .info {
+    padding-left: 80px;
+}
+.team .box .info h3 {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: var(--main-color);
+    font-size: 22px;
+    transition: var(--main-transtion);
+}
+.team .box .info p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.team .box:hover .info h3 {
+    color: #777;
+}
+/* End Team */
 /* Start Animation  */
 @keyframes up-to-down  {
     0%, 100% {
