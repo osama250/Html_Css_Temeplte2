@@ -669,7 +669,84 @@ a {
 .team .box:hover .info h3 {
     color: #777;
 }
-/* End Team */
+/* End Team ******************************************************************** */
+/* Start services */
+.services {
+    padding-top:    var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-color: var(--section-background);
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(300px , 1fr) );
+    gap: 40px;
+}
+.services .box {
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb( 0 0 0 / 13% ) , 0 2px 4px 0  rgb( 0 0 0 / 12% );
+    counter-increment: services;
+    transition: var(--main-transtion);
+    position: relative;
+}
+.services .box::before {
+    content: '';
+    position: absolute;
+    left: 50%;      top: -3px;
+    transform: translateX(-50%);
+    height: 3px;    width: 0;
+    background-color: var(--main-color);
+    transition: var(--main-transtion);
+}
+.services .box:hover {
+    transform: translateY(-10px);
+}
+.services .box:hover::before {
+    width: 100%;
+}
+.services .box i {
+    display: block;
+    color: #d5d5d5;
+    margin: 30px auto 20px;
+    text-align: center;
+}
+.services .box h3 {
+    margin: 20px 0 40px;
+    color: var(--main-color);
+    text-align: center;
+    font-size: 22px;
+}
+.services .box .info {
+    padding: 15px;
+    text-align: right;
+    background-color: #f9f9f9;
+    position: relative;
+}
+.services .box .info a {
+    color: var(--main-color);
+}
+.services .box .info::before {
+    content: '0' counter(services);
+    position: absolute;  
+    top: 0;     left: 0;
+    background-color: var(--main-color);
+    color: white;
+    height: 100%;       width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;  font-size: 20px;
+    padding-right: 15px;
+}
+.services .box .info::after {
+    content: '';
+    position: absolute;
+    background-color: #d5d5d5;
+    top: 0;         left: 80px;
+    height:  calc( 100% + .4px );   width: 50px;
+    transform: skewX(-30deg);
+}
+/* End services |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* Start Animation  */
 @keyframes up-to-down  {
     0%, 100% {
