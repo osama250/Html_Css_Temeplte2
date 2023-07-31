@@ -1168,7 +1168,87 @@ a {
     margin-top: 10px;
     border-radius: 8px;
 }
-/* end videos */
+/* end videos ************************************************************ */
+/* Start Stats */
+.stats {
+    padding-top:    var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-image: url("../image/stats.jpg");
+    background-size: cover;
+    min-height: 300px;
+}
+.stats::before {
+    content: '';
+    position: absolute;
+    left: 0;        top: 0;
+    width: 100%;    height: 100%;
+    background-color: rgb( 255 255 255 / 95% );
+}
+.stats h2 {
+    position: relative;
+    margin: 0 auto 50px;
+    font-weight: bold;
+    font-size: 40px;
+    width: fit-content;
+}
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(250px , 1fr) );
+    gap: 30px;
+}
+.stats .box {
+    position: relative;
+    padding: 30px 15px;
+    background-color: white;
+    text-align: center;
+    opacity: 0.6;
+    transition: var(--main-transtion);
+}
+.stats .box::before , 
+.stats .box::after {
+    content: '';
+    position: absolute;
+    width: 2px; height: 0;
+    background-color: var(--main-color);
+    transition: 1s;
+}
+.stats .box::after {
+    top: 0;
+    right: 0;
+}
+.stats .box::before {
+    bottom: 0;
+    left: 0;
+}
+.stats .box:hover::before , 
+.stats .box:hover::after {
+    height: 100%;
+}
+.stats .box:hover {
+    opacity: 1;
+}
+.stats .box i {
+    transition: var(--main-transtion);
+}
+.stats .box .number {
+    display: block;
+    font-size: 40px;  font-weight: bold;
+    margin: 10px 0;
+    transition: var(--main-transtion);
+}
+.stats .box .text {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 28px;
+    transition: var(--main-transtion);
+}
+.stats .box:hover i ,
+.stats .box:hover .number ,  
+.stats .box:hover .text {
+    color: var(--main-color);
+}
+/* End Stats ************************************************************* */
 /* Start Animation  */
 @keyframes up-to-down  {
     0%, 100% {
