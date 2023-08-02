@@ -86,6 +86,18 @@ a {
     color: white;
     transition-delay: 0.5s;
 }
+.dots {
+    background-image: url('../image/dots.png');
+    background-repeat: no-repeat;
+    height: 160px;      width: 200px;
+    position: absolute;
+}
+.dots-up {
+    top: 50px;         right: 0;
+}
+.dots-down {
+    bottom: 30px;      left: 0;
+}
 /* End Componentes ******************************************************* */
 /* start header */
 .header {
